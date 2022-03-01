@@ -4,7 +4,7 @@ In this scenario, we had been hired by a mobile game company to gain insights on
 
 To start, building a table schema helped visualize where certain elements existed, where records could be connected, and how more elaborate questions could be answered in the deeper levels of analysis.
 
-![Table schema outlining unique and common keys.](https://i.imgur.com/Q0B8exB.png)
+![Table schema outlining unique and common keys.](./assets/sql_project_schema)
 
 
 
