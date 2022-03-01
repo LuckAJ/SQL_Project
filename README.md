@@ -91,7 +91,7 @@ Finally, we joined the`retention_table` and the `financial_table` using a `LEFT 
 
 The result of our query is shown below, ordered in descending amount of average spending per group member:
 
-![](./assets/average_spend_per_group.png)
+![](./assets/avg_spend_per_group.png)
 
 From this table, we can see that the *Oceania & Not Retained* group spent the most, on average, while the *North America & Retained* group spent the least, on average. Additionally, though it is curious that the *Not Retained* groups all spent more, on average, than their *Retained* counterparts, it should be reassuring to note that, within each location, there were more retained players than not retained. 
 
