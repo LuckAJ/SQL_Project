@@ -38,9 +38,9 @@ The task involved constructing a table ("retention table") that included columns
 
 Knowing that this resulting table would require input from both the `player_info` and `matches_info` tables, the two were joined. More specifically, a `RIGHT JOIN` was performed to validate pulling all records from the `player_info` table (forcing inclusion of players that may not have ever matched).
 
-The first column would simply be the day of the game’s lifespan, represented as`joined` in the `player_info` table and `day` in the `matches_info` table.
+The first column would simply be the day of the game’s lifespan, represented as `joined` in the `player_info` table and `day` in the `matches_info` table.
 
-The second column used a count of the number of distinct `player_id` s, grouped and ordered by the join day. In order to calculate “retention” in the third column (defined as “a player that has matched 30 days or more out from their initial join date), a `CASE` statement categorized players based on whether or not their most recent match day was 30 days (or more) after joining (i.e., greater than 29).
+The second column used a count of the number of distinct `player_id`s, grouped and ordered by the join day. In order to calculate “retention” in the third column (defined as “a player that has matched 30 days or more out from their initial join date), a `CASE` statement categorized players based on whether or not their most recent match day was 30 days (or more) after joining (i.e., greater than 29).
 
 Finally, and perhaps more intuitively, the rightmost column shows the fractional retention over time (actually shown as a percentage, rounded to two decimal places), which can be translated as, “*from all that joined on day 2, how many stuck around [for at least 30 days]*?”. 
 
@@ -66,7 +66,7 @@ The day of lowest fractional retention was day 158 (60%), while the day of great
 
 ## **Business Question: Analyzing spending trends of players, broken down by location and retention status** 
 
-After constructing the table above (used for the *retention chart*), we sought out to answer find any patterns in spending across `retention_status` and `location`.
+After constructing the table above (used for the *retention chart*), we sought out to answer any patterns in spending across `retention_status` and `location`.
 
 > Building upon Q1, what is the average spending per retained user grouped by location? (“How does overall spending compare by location amongst retained users? Do certain regions have bigger spenders than others?”) 
 
